@@ -1,0 +1,27 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}	
+		.cellTable {
+	      border-bottom: 1px solid #ccc;
+	      text-align: left;
+	      margin-bottom: 4px;
+	    }	
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<h1>Выбор клиентов</h1>
+		ФИО <g:TextBox ui:field="name"></g:TextBox>
+		<g:TextBox ui:field="lastName"></g:TextBox>
+		<g:TextBox ui:field="fathersName"></g:TextBox>
+		<g:Button ui:field="searchButton" />
+		<c:CellTable addStyleNames='{style.cellTable}' ui:field='personTable' />
+		<g:Button styleName="{style.important}" ui:field="selectButton" text="Выбрать"/>
+		<g:Button styleName="{style.important}" ui:field="newButton" text="Новый"/>
+		<g:Button styleName="{style.important}" ui:field="closeButton" text="Закрыть"/>
+	</g:HTMLPanel>
+</ui:UiBinder> 

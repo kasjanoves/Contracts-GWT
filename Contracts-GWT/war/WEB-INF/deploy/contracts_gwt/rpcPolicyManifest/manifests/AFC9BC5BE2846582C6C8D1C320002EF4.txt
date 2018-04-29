@@ -1,0 +1,2 @@
+serviceClass: contracts.client.GreetingService
+path: 4948ECCA6C8299885812B36A5D82C7B6.gwt.rpc

@@ -1,0 +1,106 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:d="urn:import:com.google.gwt.user.datepicker.client">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+		.error {
+			color: red
+		}
+		.errorBlock {
+			white-space: pre
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<h1>Договор</h1>
+		<g:VerticalPanel styleName="{style.errorBlock}">
+			<g:Label styleName="{style.error}" ui:field="messages"></g:Label>
+		</g:VerticalPanel>
+		<g:VerticalPanel >
+			<g:DecoratorPanel >
+				<g:VerticalPanel horizontalAlignment="ALIGN_CENTER">
+					<g:HorizontalPanel>
+						<g:Grid>
+							<g:row>
+								<g:cell>Страховая сумма</g:cell>
+								<g:customCell><g:IntegerBox ui:field="sum"></g:IntegerBox></g:customCell>
+							</g:row>
+							<g:row>
+								<g:cell>Тип недвижимости</g:cell>
+								<g:customCell><g:ValueListBox ui:field="estateType"></g:ValueListBox></g:customCell>
+							</g:row>
+							<g:row>
+								<g:cell>Год постройки</g:cell>
+								<g:customCell><g:TextBox ui:field="buildYear"></g:TextBox></g:customCell>
+							</g:row>
+							<g:row>
+								<g:cell>Площадь кв.м</g:cell>
+								<g:customCell><g:TextBox ui:field="area"></g:TextBox></g:customCell>
+							</g:row>
+						</g:Grid>
+						<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
+							<g:InlineLabel>Срок действия с</g:InlineLabel>
+							<d:DateBox ui:field="dateFrom"></d:DateBox>
+							<g:InlineLabel>по</g:InlineLabel>
+							<d:DateBox ui:field="dateTo"></d:DateBox>
+						</g:HorizontalPanel>
+					</g:HorizontalPanel>
+						<g:Button ui:field="calcButton" text="Рассчитать"/>
+					<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
+						<g:InlineLabel>Дата расчета</g:InlineLabel>
+						<d:DateBox ui:field="calcDate"></d:DateBox>
+						<g:InlineLabel>Премия</g:InlineLabel>
+						<g:TextBox ui:field="price"></g:TextBox>
+					</g:HorizontalPanel>
+				</g:VerticalPanel>
+			</g:DecoratorPanel>
+			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
+				<g:InlineLabel>№ договора</g:InlineLabel>
+				<g:LongBox ui:field="number"></g:LongBox>
+				<g:InlineLabel>Дата заключения</g:InlineLabel>
+				<d:DateBox ui:field="formationDate"></d:DateBox>
+			</g:HorizontalPanel>
+			<g:Label>СТРАХОВАТЕЛЬ</g:Label>
+			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
+				<g:Button ui:field="selectPersonButton" text="Выбрать"/>
+				<g:InlineLabel>ФИО</g:InlineLabel>
+				<g:TextBox ui:field="personInitials"></g:TextBox>
+				<g:Button ui:field="editPersonButton" text="Изменить"/>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
+				<g:InlineLabel>Дата рождения</g:InlineLabel>
+				<d:DateBox ui:field="birghtDate"></d:DateBox>
+				<g:InlineLabel>Паспорт серия</g:InlineLabel>
+				<g:IntegerBox ui:field="passSeries"></g:IntegerBox>
+				<g:InlineLabel>№</g:InlineLabel>
+				<g:IntegerBox ui:field="passNum"></g:IntegerBox>
+			</g:HorizontalPanel>
+			<g:Label>Адрес недвижимости</g:Label>
+			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
+				<g:ValueListBox ui:field="state" ></g:ValueListBox>
+				<g:TextBox ui:field="postIndex" ></g:TextBox>
+				<g:TextBox ui:field="region" ></g:TextBox>
+				<g:TextBox ui:field="district" ></g:TextBox>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
+				<g:TextBox ui:field="locality" ></g:TextBox>
+				<g:TextBox ui:field="street" ></g:TextBox>
+				<g:IntegerBox ui:field="house" ></g:IntegerBox>
+				<g:TextBox ui:field="housing" ></g:TextBox>
+				<g:TextBox ui:field="building" ></g:TextBox>
+				<g:IntegerBox ui:field="apartment" ></g:IntegerBox>
+			</g:HorizontalPanel>
+			<g:Label>КОММЕНТАРИЙ</g:Label>
+			<g:HorizontalPanel>
+				<g:InlineLabel width="50%" >Комментарий к договору(не печатается на полисе)</g:InlineLabel>
+				<g:TextArea ui:field="comment"></g:TextArea>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel>
+				<g:Button styleName="{style.important}" ui:field="saveButton" text="Сохранить"/>
+				<g:Button styleName="{style.important}" ui:field="returnButton" text="К списку договоров"/>
+			</g:HorizontalPanel>
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,3 @@
+# Module contracts_gwt
+# RPC service class, partial path of RPC policy file
+contracts.client.GreetingService, 4948ECCA6C8299885812B36A5D82C7B6.gwt.rpc

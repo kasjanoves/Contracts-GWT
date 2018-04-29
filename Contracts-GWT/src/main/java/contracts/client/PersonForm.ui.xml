@@ -1,0 +1,41 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:d="urn:import:com.google.gwt.user.datepicker.client">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+		}
+		.error {
+			color: red
+		}
+		.errorBlock {
+			white-space: pre
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<h1>Клиент</h1>
+		<g:VerticalPanel styleName="{style.errorBlock}">
+			<g:Label styleName="{style.error}" ui:field="messages"></g:Label>
+		</g:VerticalPanel>
+		<g:VerticalPanel>
+			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
+				<g:InlineLabel>ФИО</g:InlineLabel> <g:TextBox ui:field="name"></g:TextBox>
+				<g:TextBox ui:field="lastName"></g:TextBox>
+				<g:TextBox ui:field="fathersName"></g:TextBox>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
+				<g:InlineLabel>Дата рождения</g:InlineLabel> <d:DateBox ui:field="birthDate"> </d:DateBox>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
+				<g:InlineLabel>Пасспорт серия</g:InlineLabel> <g:IntegerBox ui:field="passSeries"></g:IntegerBox>
+				<g:InlineLabel>№</g:InlineLabel> <g:IntegerBox ui:field="passNum"></g:IntegerBox>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel>
+				<g:Button styleName="{style.important}" ui:field="saveButton" text="Сохранить"/>
+				<g:Button styleName="{style.important}" ui:field="cancelButton" text="Отменить"/>
+			</g:HorizontalPanel>
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 
