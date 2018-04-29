@@ -21,7 +21,7 @@
 		<g:VerticalPanel >
 			<g:DecoratorPanel >
 				<g:VerticalPanel horizontalAlignment="ALIGN_CENTER">
-					<g:HorizontalPanel>
+					<g:HorizontalPanel spacing="5">
 						<g:Grid>
 							<g:row>
 								<g:cell>Страховая сумма</g:cell>
@@ -40,7 +40,7 @@
 								<g:customCell><g:TextBox ui:field="area"></g:TextBox></g:customCell>
 							</g:row>
 						</g:Grid>
-						<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
+						<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE" spacing="5">
 							<g:InlineLabel>Срок действия с</g:InlineLabel>
 							<d:DateBox ui:field="dateFrom"></d:DateBox>
 							<g:InlineLabel>по</g:InlineLabel>
@@ -48,7 +48,7 @@
 						</g:HorizontalPanel>
 					</g:HorizontalPanel>
 						<g:Button ui:field="calcButton" text="Рассчитать"/>
-					<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
+					<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE" spacing="5">
 						<g:InlineLabel>Дата расчета</g:InlineLabel>
 						<d:DateBox ui:field="calcDate"></d:DateBox>
 						<g:InlineLabel>Премия</g:InlineLabel>
@@ -56,20 +56,20 @@
 					</g:HorizontalPanel>
 				</g:VerticalPanel>
 			</g:DecoratorPanel>
-			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
+			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE" spacing="5">
 				<g:InlineLabel>№ договора</g:InlineLabel>
 				<g:LongBox ui:field="number"></g:LongBox>
 				<g:InlineLabel>Дата заключения</g:InlineLabel>
 				<d:DateBox ui:field="formationDate"></d:DateBox>
 			</g:HorizontalPanel>
 			<g:Label>СТРАХОВАТЕЛЬ</g:Label>
-			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
+			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE" spacing="5">
 				<g:Button ui:field="selectPersonButton" text="Выбрать"/>
 				<g:InlineLabel>ФИО</g:InlineLabel>
 				<g:TextBox ui:field="personInitials"></g:TextBox>
 				<g:Button ui:field="editPersonButton" text="Изменить"/>
 			</g:HorizontalPanel>
-			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
+			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE" spacing="5">
 				<g:InlineLabel>Дата рождения</g:InlineLabel>
 				<d:DateBox ui:field="birghtDate"></d:DateBox>
 				<g:InlineLabel>Паспорт серия</g:InlineLabel>
@@ -78,13 +78,13 @@
 				<g:IntegerBox ui:field="passNum"></g:IntegerBox>
 			</g:HorizontalPanel>
 			<g:Label>Адрес недвижимости</g:Label>
-			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
+			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE" spacing="5">
 				<g:ValueListBox ui:field="state" ></g:ValueListBox>
 				<g:TextBox ui:field="postIndex" ></g:TextBox>
 				<g:TextBox ui:field="region" ></g:TextBox>
 				<g:TextBox ui:field="district" ></g:TextBox>
 			</g:HorizontalPanel>
-			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
+			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE" spacing="5">
 				<g:TextBox ui:field="locality" ></g:TextBox>
 				<g:TextBox ui:field="street" ></g:TextBox>
 				<g:IntegerBox ui:field="house" ></g:IntegerBox>
@@ -93,11 +93,11 @@
 				<g:IntegerBox ui:field="apartment" ></g:IntegerBox>
 			</g:HorizontalPanel>
 			<g:Label>КОММЕНТАРИЙ</g:Label>
-			<g:HorizontalPanel>
-				<g:InlineLabel width="50%" >Комментарий к договору(не печатается на полисе)</g:InlineLabel>
-				<g:TextArea ui:field="comment"></g:TextArea>
+			<g:HorizontalPanel spacing="5">
+				<g:InlineLabel width="10" wordWrap="true">Комментарий к договору(не печатается на полисе)</g:InlineLabel>
+				<g:TextArea ui:field="comment" width="150"></g:TextArea>
 			</g:HorizontalPanel>
-			<g:HorizontalPanel>
+			<g:HorizontalPanel spacing="5">
 				<g:Button styleName="{style.important}" ui:field="saveButton" text="Сохранить"/>
 				<g:Button styleName="{style.important}" ui:field="returnButton" text="К списку договоров"/>
 			</g:HorizontalPanel>

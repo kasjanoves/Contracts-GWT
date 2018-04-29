@@ -20,19 +20,19 @@
 			<g:Label styleName="{style.error}" ui:field="messages"></g:Label>
 		</g:VerticalPanel>
 		<g:VerticalPanel>
-			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
+			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE" spacing="5">
 				<g:InlineLabel>ФИО</g:InlineLabel> <g:TextBox ui:field="name"></g:TextBox>
 				<g:TextBox ui:field="lastName"></g:TextBox>
 				<g:TextBox ui:field="fathersName"></g:TextBox>
 			</g:HorizontalPanel>
-			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
+			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE" >
 				<g:InlineLabel>Дата рождения</g:InlineLabel> <d:DateBox ui:field="birthDate"> </d:DateBox>
 			</g:HorizontalPanel>
-			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
+			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE" spacing="5">
 				<g:InlineLabel>Пасспорт серия</g:InlineLabel> <g:IntegerBox ui:field="passSeries"></g:IntegerBox>
 				<g:InlineLabel>№</g:InlineLabel> <g:IntegerBox ui:field="passNum"></g:IntegerBox>
 			</g:HorizontalPanel>
-			<g:HorizontalPanel>
+			<g:HorizontalPanel spacing="5">
 				<g:Button styleName="{style.important}" ui:field="saveButton" text="Сохранить"/>
 				<g:Button styleName="{style.important}" ui:field="cancelButton" text="Отменить"/>
 			</g:HorizontalPanel>

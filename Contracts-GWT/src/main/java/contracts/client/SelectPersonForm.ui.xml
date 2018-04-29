@@ -18,7 +18,7 @@
 		ФИО <g:TextBox ui:field="name"></g:TextBox>
 		<g:TextBox ui:field="lastName"></g:TextBox>
 		<g:TextBox ui:field="fathersName"></g:TextBox>
-		<g:Button ui:field="searchButton" />
+		<g:Button ui:field="searchButton" ><img src='image.png'/></g:Button>
 		<c:CellTable addStyleNames='{style.cellTable}' ui:field='personTable' />
 		<g:Button styleName="{style.important}" ui:field="selectButton" text="Выбрать"/>
 		<g:Button styleName="{style.important}" ui:field="newButton" text="Новый"/>
